@@ -23,8 +23,8 @@ const Footer = (setSelectedPage: Props) => {
             </div>
             <div className="mt-16 basis-1/4 md:mt-0">
                 <h4 className="font-bold">Kontakt</h4>
-                <p className="my-5">Halli Hallo Hallöle</p> 
-                <p>(+49) 425-6825</p>
+                <p className="my-5">Du kannst uns gerne anrufen</p> 
+                <p>(+49) 123-4567</p>
             </div>
         </div>
 
