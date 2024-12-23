@@ -1,6 +1,7 @@
 import Navbar from "@/scenes/navbar/index.tsx";
 import Home from "./scenes/home";
 import Benefits from "@/scenes/benefits";
+import OurClasses from "./scenes/ourClasses";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import { HomeIcon } from "@heroicons/react/24/solid";
@@ -31,7 +32,7 @@ function App() {
 
     <Home setSelectedPage={setSelectedPage}/>
     <Benefits setSelectedPage={setSelectedPage}/>
-    
+    <OurClasses setSelectedPage={setSelectedPage}/>
   </div>
   );
 }

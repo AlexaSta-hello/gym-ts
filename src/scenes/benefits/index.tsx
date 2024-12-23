@@ -46,6 +46,7 @@ const Benefits = ({setSelectedPage}: Props) => {
         className="mx-auto min-h-full w-5/6 py-20"
     >
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}>
+            
             {/* Header */}
             <motion.div 
                 className="md:my-5 md:w-3/5"
@@ -108,7 +109,7 @@ const Benefits = ({setSelectedPage}: Props) => {
                             >
                                 <HText>
                                     ÜBER 200 GLÜCKLICHE MITGLIEDER*INNEN BLEIBEN MIT UNS {" "}
-                                    <span className="text-primary-100">FIT</span>.
+                                    <span className="text-gray-100">FIT</span>.
                                 </HText>
                             </motion.div>
                         </div>
