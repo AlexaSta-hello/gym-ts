@@ -109,7 +109,7 @@ const Benefits = ({setSelectedPage}: Props) => {
                             >
                                 <HText>
                                     ÜBER 200 GLÜCKLICHE MITGLIEDER*INNEN BLEIBEN MIT UNS {" "}
-                                    <span className="text-gray-100">FIT</span>.
+                                    <span className="text-secondary-400">FIT</span>.
                                 </HText>
                             </motion.div>
                         </div>

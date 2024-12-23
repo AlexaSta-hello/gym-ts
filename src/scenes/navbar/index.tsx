@@ -25,7 +25,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
   
 
   return <nav>
-    <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
+    <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-50 w-full py-6`}>
 
           <div className={`${flexBetween} mx-auto w-5/6`}>
             <div className={`${flexBetween} w-full gap-16`}>
@@ -70,10 +70,10 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                 ) : (
                     <div>
                       <button
-                      className="rounded-full bg-secondary-500 p-2"
+                      className="rounded-full bg-secondary-400 p-2"
                       onClick = {() => setIsMenuToggled(!isMenuToggled)}
                       >
-                        <Bars3Icon className="h-6 w-6 text-white" />
+                        <Bars3Icon className="h-6 w-6 text-gray-500" />
                       </button>
                     </div>
                     )
