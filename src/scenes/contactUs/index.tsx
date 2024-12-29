@@ -68,7 +68,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                     <form /* Siehe www.formsubmit.co */
                         target="_blank"
                         onSubmit={onSubmit}
-                        action="https://formsubmit.co/alex@better-world-web.com"
+                        action="https://formsubmit.co/alex@better-world-web.de"
                         method="POST"
                     >
                         <input 
@@ -118,7 +118,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
 
                         <button
                             type="submit"
-                            className="mt-20 rounded-lg  bg-secondary-400 px-20 py-3 transition duration-500 hover:bg-secondary-500 hover:text-white"
+                            className="mt-10 rounded-lg  bg-secondary-400 px-20 py-3 transition duration-500 hover:bg-secondary-500 hover:text-white"
                         >
                           SENDEN  
                         </button>
