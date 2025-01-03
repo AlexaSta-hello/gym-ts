@@ -8,7 +8,6 @@ import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
-import { div } from "framer-motion/client";
 
 type Props = {
   isTopOfPage: boolean;
