@@ -1,11 +1,12 @@
 import Navbar from "@/scenes/navbar/index.tsx";
 import Home from "./scenes/home";
-import Benefits from "@/scenes/benefits";
-import OurClasses from "@/scenes/ourClasses";
-import ContactUs from "@/scenes/contactUs";
+import Speakers from "@/scenes/speaker";
+import Workshops from "@/scenes/workshops";
+import Register from "@/scenes/register";
 import Footer from "@/scenes/footer";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
+import Faq from "./scenes/faq";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -32,9 +33,10 @@ function App() {
     />
 
     <Home setSelectedPage={setSelectedPage}/>
-    <Benefits setSelectedPage={setSelectedPage}/>
-    <OurClasses setSelectedPage={setSelectedPage}/>
-    <ContactUs setSelectedPage={setSelectedPage}/>
+    <Speakers setSelectedPage={setSelectedPage}/>
+    <Workshops setSelectedPage={setSelectedPage}/>
+    <Faq setSelectedPage={setSelectedPage}/>
+    <Register setSelectedPage={setSelectedPage}/>
     <Footer/>
   </div>
   );

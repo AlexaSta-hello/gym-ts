@@ -1,18 +1,21 @@
 export enum SelectedPage { 
     Home = "home",
-    Benefits = "benefits",
-    OurClasses = "unserekurse",
-    ContactUs = "kontakt",
+    Speakers = "speakers",
+    Workshops = "workshops",
+    Register = "register",
+    FAQ = "faq"
   }
 
-export interface BenefitType {
-  icon: JSX.Element;
-  title: string,
+export interface SpeakerType {
+  image: string;
+  name: string,
   description: string
 }
 
-export interface ClassType {
-  name: string; 
-  description?: string; /* mit ? -> description optional */
-  image: string
-}
+export interface Workshop  {
+    day: string;
+    time: string;
+    name: string;
+    speaker?: string;
+    description?: string;
+  };

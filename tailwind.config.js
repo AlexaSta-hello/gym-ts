@@ -4,38 +4,46 @@ module.exports = {
     "./index.html", // Erfasst die HTML-Datei im Root-Verzeichnis.
     "./src/**/*.{js,ts,jsx,tsx}", // Erfasst alle JavaScript-, TypeScript- und React-Dateien im src-Ordner.
   ],
+  important: "#root", // Überschreibt Default Styles von Material
   theme: {
     extend: {
       colors: {
-        "gray-20": "#fffffa",
-        "gray-50": "#FCD5CE",
-        "gray-100": "#D18965",
-        "gray-500": "#5D4037",
-        "primary-100": "#C8C284",
-        "primary-300": "#9B9669",
-        "primary-500": "#74704E",
-        "secondary-400": "#FFBE66",
-        "secondary-500": "#FF9810",
+        "blue-3": "#150E60",
+        "blue-2": "#473DC6",
+        "blue-1": "#CFE6FF",
+        "green-2": "#DFC1FF",
+        "green-1": "#C1FF72",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred": "linear-gradient(90deg, #FF616A 0%, #FFC837 100%",
         "mobile-home": "url('./assets/HomePageGraphic.png')",
+        "hero-pattern": "url('./assets/HeroPattern.png')",
+        "silver-pattern": "url('./assets/SilverPattern.png')"
       }),
       fontFamily: {
-        dmsans: ["DM Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"]
+        montserrat: ["Montserrat", "sans-serif"],
+        audiowide: ["Audiowide", "sans-serif"]
       },
       content: {
-        evolvetext: "url('./assets/EvolveText.png')",
+        arrow: "url('./assets/Arrow.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
-        sparkles: "url('./assets/Sparkles.png')",
-        circles: "url('./assets/Circles.png')",
-      }
+        network: "url('./assets/Network.png')",
+        star: "url('./assets/Star.png')",
+        flash: "url('./assets/Flash.png')",
+        pink1: "url('./assets/Pink1.png')",
+        pinktropfen: "url('./assets/pink-tropfen.png')",
+        pinkherz: "url('./assets/pink-herz.png')",
+      },
+      transform: {
+        'rotate-y-0': 'rotateY(0deg)',
+        'rotate-y-180': 'rotateY(180deg)',
+      },
     }, 
     screens: {
       xs: "480px",
       sm: "768px",
-      md: "1060px",
+      md: "1024px",
+      lg: "1298px"
     }
   },
   plugins: [],

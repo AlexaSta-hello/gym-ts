@@ -1,14 +1,9 @@
 /* Anlegen mit shortcode tsrafc*/
-import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
-import HomePageText from "@/assets/HomePageText.png";
-import HomePageGraphic from "@/assets/HomePageGraphic.png";
-import SponsorRedBull from "@/assets/SponsorRedBull.png";
-import SponsorForbes from "@/assets/SponsorForbes.png";
-import SponsorFortune from "@/assets/SponsorFortune.png";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import { motion } from "framer-motion";
+import HText from "@/shared/HText";
+import {  motion } from "framer-motion";
+import DateAnimation from "@/shared/DateAnimation";
 
 
 type Props = {
@@ -16,85 +11,91 @@ type Props = {
 };
 
 const Home = ({setSelectedPage}: Props) => {
-    const isAboveMediumScreens = useMediaQuery ("(min-width:1060px)");
 
   return (
     <section
         id="home"
-        className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0" /* full height above medium screens */
+        className="min-h-screen"
     >
-    {/* Image and Main Header */}
     <motion.div 
-        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
-        onViewportEnter={() => setSelectedPage(SelectedPage.Home)} 
-    >
-        {/* Main Header */}
-        <div className="z-10 mt-32 md:basis-3/5">
-            {/* Headings */}
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
+        
+        {/* Hero */}
+        <div className=" bg-hero-pattern bg-no-repeat bg-cover h-[90vh] flex-col content-center justify-center text-center text-white">
             <motion.div 
-                className="md:-mt-20"
+                className="mt-8 gap-8"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true, amount: 0.5}} /* Animation wird getriggert wenn man 0.5 vom div sieht*/
-                transition={{duration: 0.8}}
+                transition={{delay: 0.2, duration: 0.4, ease: "easeOut"}}
                 variants={{
-                    hidden: {opacity: 0, x:-50},
-                    visible: {opacity: 1, x:0}
+                    hidden: {opacity: 0, scale:2, filter:"blur(10px)"},
+                    visible: {opacity: 1, scale:1, filter:"blur(0px)"}
                 }}
             >
-                <div className="relative">
-                    <div className="before:absolute before:-top-20 before:-left-10 before:z-[-1] md:before:content-evolvetext"> {/* siehe Tailwind.config. so baue ich content in :before  ein*/}
-                        <img src={HomePageText} alt="home-page-text" />
-                    </div>
-                </div>
-                <p className="mt-8 text-sm">
-                Willkommen in unserem Yogastudio! Erreiche deine Traumfigur und finde innere Ruhe und Balance 
-                mit unseren vielseitigen Yoga-Kursen und Meditations-Zirkeln. Starte jetzt dein Wohlfühlabenteuer!
-                </p>
+                <HText>DIGIT CON</HText>
             </motion.div>
-            {/* Actions */}
+
+            <p className="mt-3 text-white text-lg px-4">A journey into digital networking, coding and research!</p>
+            
+            {/* Action */}
             <motion.div 
-                className="mt-8 flex items-center gap-8"
+                className="mt-16"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{once: true, amount: 0.5}} /* Animation wird getriggert wenn man 0.5 vom div sieht*/
-                transition={{delay: 0.2, duration: 0.8}}
+                transition={{delay: 0.8, duration: 0.4}}
                 variants={{
                     hidden: {opacity: 0, x:-50},
                     visible: {opacity: 1, x:0}
                 }}
             >
                 <ActionButton setSelectedPage={setSelectedPage}>
-                    Jetzt anmelden!
-                </ActionButton>
-                <AnchorLink
-                    className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-                    onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-                    href={`#${SelectedPage.ContactUs}`}
-                >
-                    <p>Erfahre mehr</p>
-                </AnchorLink>
+                    REGISTER FOR FREE
+                </ActionButton>   
             </motion.div>
-        </div>
-        {/* Image */}
-        <div className="mt-8 flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-end">
-            <img src={HomePageGraphic} alt="home-page-graphic" />
-        </div>
-    </motion.div>
 
-    {/* Sponsors */}
-    {isAboveMediumScreens && (
-        <div className="h-[150px] w-full bg-primary-100 flex justify-center">
-            <div className="mx-auto w-5/6 flex items-center">
-                <div className="flex items-center w-3/5 justify-between gap-8">
-                   <img src={SponsorRedBull} alt="redbull-sponsors" />
-                   <img src={SponsorForbes} alt="forbes-sponsors" />
-                   <img src={SponsorFortune} alt="fortune-sponsors" />
-                </div>
-            </div>
         </div>
-    )}
+
+        <DateAnimation />
+
+        {/* JOIN US and Image */}
+        <div className="py-24 flex justify-center px-8 md:flex bg-blue-1 m-auto">
+            
+            <motion.div
+                className="mt-10 md:mt-0 w-full overflow-hidden max-w-[1200px]"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true, amount: 0.5}} /* Animation wird getriggert wenn man 0.5 vom div sieht*/
+                transition={{duration: 0.8}}
+                variants={{
+                    hidden: {opacity: 0, y:50},
+                    visible: {opacity: 1, y:0}
+                }}
+            >
+                <div className="text-center flex flex-col items-center">
+                    <p 
+                        className="mb-10 text-5xl sm:text-7xl lg:text-8xl  mx-auto text-blue-2 font-semibold">
+                        Explore the forefront of digital networking and technology, shaping 
+                        connections and ideas that inspire the future.
+                    </p>
+                    <p className="mb-10 text-3xl sm:text-4xl leading-normal sm:leading-relaxed lg:text-5xl lg:leading-relaxed mx-auto text-blue-2 font-semibold">
+                        Join us for an unforgettable experience!
+                    </p>
+                    <ActionButton setSelectedPage={setSelectedPage}>
+                        REGISTER FOR FREE
+                    </ActionButton>   
+                    
+                </div>
+                
+            </motion.div>
+
+        </div> 
+
+    </motion.div>
     </section>
+
+    
   )
 }
 
